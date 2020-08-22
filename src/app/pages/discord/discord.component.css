@@ -1,0 +1,15 @@
+app-rooms {
+    float: left;
+    width: 20%;
+    border: 1px solid black;
+}
+
+app-users {
+    float: right;
+    width: 20%;
+    border: 1px solid black;
+}
+
+app-messages {
+    width: 20%;
+}

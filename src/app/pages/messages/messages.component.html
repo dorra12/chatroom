@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="row justify-content-md-center">
+        <ul>
+            <li *ngFor="let msg of messageList">
+                <span>{{ getDatUser(msg.userId).username }} -> </span>{{ msg.message }}
+            </li>
+        </ul>
+    </div>
+    <div class="row justify-content-md-center">
+        <form (ngSubmit)="handleForm()">
+            <div class="form-group">
+                <label for="formGroupExampleInput">add your message</label>
+                <input [(ngModel)]="yourMessage" type="text" class="form-control mb-6" id="formGroupExampleInput" placeholder="Add you message" name="msg">
+            </div>
+            <input type="submit" value=">" />
+        </form>
+    </div>
+</div>

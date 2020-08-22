@@ -1,0 +1,17 @@
+<h1>Rooms</h1>
+<ul>
+  <li *ngFor="let room of roomsList">
+    <a
+    [routerLink]="['/discord', room.id]"
+    routerLinkActive='current'
+    >
+      {{ room.roomName }}
+    </a>
+  </li>
+</ul>
+
+<form (ngSubmit)="handleForm()">
+  <!-- [(ngModel)] requeried the Forms Module -->
+  <input name="room" [(ngModel)]="name" />
+  <input type="submit" value="Add" />
+</form>
